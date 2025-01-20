@@ -7,12 +7,12 @@ export async function getPokemonDescription() {
         'Accept': 'application/json',
       },
       body: JSON.stringify({
-        prompt: `Generate a creative description for a completely new, unique Vorpal Bunny. The name should be original and playful, incorporating bunny/rabbit themes with magical or whimsical elements. For example:
-        - "Hoppendrix" (hopping + Hendrix)
-        - "Flufftastic" (fluff + fantastic)
-        - "Caerbannog" (reference to Monty Python)
+        prompt: `Generate a creative description for a completely new, unique Vorpal Bunny. The name should be original and clever, incorporating both the deadly/sharp nature of "vorpal" with bunny/rabbit themes. For example:
+        - "Slashare" (slash + hare)
+        - "Doomhop" (doom + hop)
+        - "Bladebun" (blade + bunny)
         
-        Be imaginative and original - create unique magical bunnies. Include its type (e.g. Mystic, Trickster, Warrior, Scholar, Jester, Guardian, etc), height, weight, and a brief enchanting description of its appearance and behavior. The description should capture the whimsical and magical nature of the Vorpal Bunny world.
+        Remember that "vorpal" means sharp, deadly, or fatal - these are not just cute bunnies, but dangerous and powerful creatures. Include its type (choose from: Warrior, Trickster, Mystic, Reaper, Hunter, Assassin, Shadow, etc), height, weight, and a brief description capturing both its lethal abilities and its deceptively cute appearance.
 
         interface Response {
           name: string;
@@ -24,9 +24,9 @@ export async function getPokemonDescription() {
 
         Example response (generate something completely different):
         {
-          "name": "Lunarhop",
-          "description": "A mystical moon-blessed bunny whose silver fur sparkles with stardust. Its ears glow with ethereal light during the full moon, and it's said to grant wishes to those who share their carrots.",
-          "type": "Mystic/Guardian",
+          "name": "Grimhare",
+          "description": "A deceptively adorable bunny whose cotton-soft fur conceals razor-sharp spines. Its cute twitching nose can detect fear from miles away, and its seemingly innocent hops can shatter stone. Those who underestimate its lethal grace rarely live to tell the tale.",
+          "type": "Hunter/Assassin",
           "height": "0.4m",
           "weight": "3.5kg"
         }`,
@@ -56,7 +56,7 @@ export async function generatePokemonImage(description) {
         'Accept': 'application/json',
       },
       body: JSON.stringify({
-        prompt: `Generate a unique image URL for a magical Vorpal Bunny based on this description: "${description}". Each response should be different and creative. The bunnies should be whimsical and magical in nature, with unique characteristics like glowing features, magical accessories, or special patterns. Return a URL to an image that matches the description.
+        prompt: `Generate a unique image URL for a Vorpal Bunny based on this description: "${description}". Each response should be different and creative. These are not just cute bunnies - they are deadly and dangerous creatures that happen to look like rabbits. Include elements that hint at their lethal nature: glowing red eyes, sharp claws, metallic fur, battle scars, or deadly magical auras, while still maintaining their deceptively cute rabbit-like appearance. Return a URL to an image that matches the description.
 
         interface Response {
           imageUrl: string;
